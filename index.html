@@ -2,19 +2,25 @@
 <html>
 
 <head>
-    <title>Registrazione Utente</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
     <h1>Registrazione Utente</h1>
     <ul id="namesList">
-        <li>Nomi salvati:</li>
+        <li class="nomiSalvati">Nomi salvati:</li>
     </ul>
-    <label for="name">Nome:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <button type="button" onclick="saveName()">Salva Nome</button>
-    <button type="button" onclick="removeName()">Rimuovi Nome</button>
+    <div>
+        <span> Nome:</span>
+        <input type="text" id="name" name="name" required>
+
+        <button type="button" onclick="saveName()">Salva Nome</button>
+        <button type="button" onclick="removeName()">Rimuovi Nome</button>
+    </div>
+
 
     <script src="./newuser.js">	</script>
 </body>
