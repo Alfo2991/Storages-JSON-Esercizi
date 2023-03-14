@@ -21,20 +21,12 @@ function saveName() {
 
 }
 
-function removeName() {
-    localStorage.removeItem("name");
-    
-
-    const nameList = document.getElementById('namesList');
-    namesList.innerHTML = ""
-
-}
-
 function addNameToList(name) {
     const namesList = document.getElementById("namesList");
     const newNameList = document.createElement('li');
+    newNameList.id = name;
     newNameList.innerHTML = name;
-   
+
     const removeButton = document.createElement('button');
     removeButton.innerHTML = 'Rimuovi';
     removeButton.addEventListener('click', function() {
@@ -44,5 +36,13 @@ function addNameToList(name) {
 
     namesList.appendChild(newNameList);
 }
-    
+
+function removeName(name) {
+    const nameList = document.getElementById('namesList');
+    const oldName = document.getElementById(name);
+    if (oldName) {
+        nameList.removeChild(oldName);
+        localStorage.removeItem("name");
+    }
+}
 
